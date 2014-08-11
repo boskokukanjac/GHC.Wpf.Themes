@@ -79,7 +79,7 @@
                                                   Margin="12,2,2,2"
                                                   RecognizesAccessKey="True" />
 
-                                <Button Command="Close" Name="btnClose" Visibility="Hidden" CommandParameter="{Binding}" Grid.Column="1">
+                                <Button Command="Close" Name="btnClose" Visibility="Hidden" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=TabItem}}" Grid.Column="1">
                                     <Button.Style>
                                         <Style TargetType="{x:Type Button}">
                                             <Setter Property="OverridesDefaultStyle" Value="True" />
