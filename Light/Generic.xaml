@@ -2,18 +2,18 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Light/Shapes.xaml"/>
-        <ResourceDictionary Source="/Light/ButtonStyle.xaml"/>
-        <ResourceDictionary Source="/Light/CheckBoxStyle.xaml"/>
-        <ResourceDictionary Source="/Light/ComboBoxStyle.xaml"/>
-        <ResourceDictionary Source="/Light/TextBoxStyle.xaml"/>
-        <ResourceDictionary Source="/Light/Typography.xaml"/>
-        <ResourceDictionary Source="/Light/TabControlStyle.xaml"/>
-        <ResourceDictionary Source="/Light/ListBoxStyle.xaml"/>
-        <ResourceDictionary Source="/Light/ScrollBarStyle.xaml"/>
-        <ResourceDictionary Source="/Light/GridSplitterStyle.xaml"/>
-        <ResourceDictionary Source="/Light/MenuStyle.xaml"/>
-        <ResourceDictionary Source="/Light/ToolTipStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/Shapes.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ButtonStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/CheckBoxStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ComboBoxStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/TextBoxStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/Typography.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/TabControlStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ListBoxStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ScrollBarStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/GridSplitterStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/MenuStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ToolTipStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>
