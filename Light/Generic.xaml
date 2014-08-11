@@ -14,6 +14,7 @@
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/GridSplitterStyle.xaml"/>
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/MenuStyle.xaml"/>
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ToolTipStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/GroupBoxStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>
