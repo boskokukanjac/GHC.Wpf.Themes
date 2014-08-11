@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="AccentColor">#1BA1E2</Color>
+    <SolidColorBrush x:Key="Accent" Color="{StaticResource AccentColor}" />
+
+    <SolidColorBrush x:Key="SelectedItemForeground" Color="White" />
+    <SolidColorBrush x:Key="SelectedItemBorder" Color="#991BA1E2" />
+    <SolidColorBrush x:Key="ItemMouseHoverBackground" Color="#FFEEEEEE" />
+
+    <SolidColorBrush x:Key="BackgroundBrush">#FFFFFFFF</SolidColorBrush>
+    <SolidColorBrush x:Key="BorderBrush">#FFCCCCCC</SolidColorBrush>
+    <SolidColorBrush x:Key="Foreground">#FF444444</SolidColorBrush>
+
+    <SolidColorBrush x:Key="ComboBoxDropDownArrowColor">#FF444444</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxDropDownArrowHoverColor">#FF000000</SolidColorBrush>
+
+    <!-- Scroll Bar -->
+    <SolidColorBrush x:Key="ScrollBarMouseDownBrush" Color="#6D6D6D"/>
+    <SolidColorBrush x:Key="ScrollbarGlyphBrush" Color="#AEACAC" />
+    <SolidColorBrush x:Key="ScrollbarGlyphMouseOver" Color="#7E7C7C"/>
+
+    <!-- Menu -->
+    <SolidColorBrush x:Key="MenuForegroundColor" Color="#414141"/>
+    <SolidColorBrush x:Key="MenuArrowColor" Color="Silver"/>
+    <SolidColorBrush x:Key="MenuSeparatorBorderBrush" Color="Silver"/>
+    <SolidColorBrush x:Key="SubmenuItemBorderColor" Color="#7da2ce" Opacity="0.4" />
+    <SolidColorBrush x:Key="SubmenuItemBackgroundColor" Color="White"/>
+    <SolidColorBrush x:Key="SubmenuItemBackgroundHighlightedColor" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="MenuDisabledForegroundColor" Color="#999999"/>
+    <DropShadowEffect x:Key="MainMenuShadowEffect" Direction="-90" Color="WhiteSmoke" ShadowDepth="1" BlurRadius="4" Opacity="0.5" />
+    <DropShadowEffect x:Key="SubmenuShadowEffect" Color="Black" ShadowDepth="2" BlurRadius="4" Opacity="0.5" />
+    
+</ResourceDictionary>
