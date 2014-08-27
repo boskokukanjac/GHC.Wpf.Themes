@@ -8,6 +8,7 @@
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ComboBoxStyle.xaml"/>
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/TextBoxStyle.xaml"/>
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/Typography.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ClosableTabControlStyle.xaml"/>
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/TabControlStyle.xaml"/>
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ListBoxStyle.xaml"/>
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ScrollBarStyle.xaml"/>

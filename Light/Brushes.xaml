@@ -11,6 +11,11 @@
     <SolidColorBrush x:Key="BackgroundBrush">#FFFFFFFF</SolidColorBrush>
     <SolidColorBrush x:Key="BorderBrush">#FFCCCCCC</SolidColorBrush>
     <SolidColorBrush x:Key="Foreground">#FF444444</SolidColorBrush>
+    <SolidColorBrush x:Key="ForegroundDisabled">#FFCCCCCC</SolidColorBrush>
+
+    <SolidColorBrush x:Key="TabControlBorderBrush">#FFE1E1E1</SolidColorBrush>
+    <SolidColorBrush x:Key="TabItemForeground">#FF777777</SolidColorBrush>
+    <SolidColorBrush x:Key="TabItemActiveForeground">#FF444444</SolidColorBrush>
 
     <SolidColorBrush x:Key="ComboBoxDropDownArrowColor">#FF444444</SolidColorBrush>
     <SolidColorBrush x:Key="ComboBoxDropDownArrowHoverColor">#FF000000</SolidColorBrush>

@@ -7,7 +7,7 @@
 
     <Style TargetType="{x:Type TabControl}">
         <Setter Property="BorderThickness" Value="0,2,0,0" />
-        <Setter Property="BorderBrush" Value="{StaticResource Accent}" />
+        <Setter Property="BorderBrush" Value="{StaticResource TabControlBorderBrush}" />
         <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -28,6 +28,7 @@
                                   Background="Transparent" />
                         <Border x:Name="Border"
                                 Grid.Row="1"
+                                Margin="0,-1,0,0"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="{TemplateBinding Background}"
@@ -44,29 +45,16 @@
     </Style>
 
     <Style TargetType="{x:Type TabItem}">
-        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Foreground" Value="{StaticResource TabItemForeground}" />
         <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TabItem}">
                     <Grid x:Name="Root">
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="SelectionStates">
-                                <VisualState x:Name="Unselected" />
-                                <VisualState x:Name="Selected">
-                                    <Storyboard>
-                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource AccentColor}" />
-                                        </ColorAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal" />
-                                <VisualState x:Name="MouseOver" />
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                        <Border x:Name="Border" Background="{TemplateBinding Background}"
+                                BorderBrush="Transparent"
+                                Margin="0,-1"
+                                BorderThickness="0,0,0,2">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
@@ -76,49 +64,22 @@
                                                   VerticalAlignment="Center"
                                                   HorizontalAlignment="Center"
                                                   ContentSource="Header"
-                                                  Margin="12,2,2,2"
+                                                  Margin="12,2"
+                                                  TextBlock.FontSize="13"
                                                   RecognizesAccessKey="True" />
-
-                                <Button Command="Close" Name="btnClose" Visibility="Hidden" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=TabItem}}" Grid.Column="1">
-                                    <Button.Style>
-                                        <Style TargetType="{x:Type Button}">
-                                            <Setter Property="OverridesDefaultStyle" Value="True" />
-                                            <Setter Property="Template">
-                                                <Setter.Value>
-                                                    <ControlTemplate TargetType="{x:Type Button}">
-                                                        <Border Background="Transparent">
-                                                            
-                                                            <Path Data="M0,0 L1,1 M0,1 L1,0" 
-                                                                  Stretch="Fill" 
-                                                                  Margin="5,1,5,-1"
-                                                                  SnapsToDevicePixels="True"
-                                                                  Width="10" 
-                                                                  Height="10"
-                                                                  StrokeThickness="2"
-                                                                  Stroke="{TemplateBinding Foreground}" />
-                                                        </Border>
-
-                                                    </ControlTemplate>
-                                                </Setter.Value>
-                                            </Setter>
-                                            <Style.Triggers>
-                                                <Trigger Property="IsMouseOver" Value="True">
-                                                    <Setter Property="Foreground" Value="Silver" />
-                                                </Trigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Button.Style>
-                                </Button>
                             </Grid>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Visibility" Value="Visible" TargetName="btnClose"/>
+                            <Setter Property="Foreground" Value="{StaticResource TabItemActiveForeground}" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Foreground" Value="{StaticResource SelectedItemForeground}" />
-                            <Setter Property="Visibility" Value="Visible" TargetName="btnClose"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource Accent}" />
+                            <Setter Property="Foreground" Value="{StaticResource TabItemActiveForeground}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{StaticResource ForegroundDisabled}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
