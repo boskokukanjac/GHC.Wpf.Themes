@@ -118,13 +118,12 @@
                             <Border x:Name="MouseOverBorder" SnapsToDevicePixels="True" Height="12" BorderBrush="{StaticResource Accent}"
                                     BorderThickness="1" Visibility="Collapsed" />
                             <Path x:Name="CheckIcon"
-                                  SnapsToDevicePixels="True"
                                   Stroke="{TemplateBinding Foreground}"
-                                  Data="M 0 0 L 7 7 M 0 7 L 7 0" 
+                                  Data="M1,3 L3,5 L7,0"
                                   VerticalAlignment="Center" 
                                   HorizontalAlignment="Center"
-                                  Stretch="Uniform"
-                                  Margin="2"
+                                  Stretch="None"
+                                  Margin="0"
                                   StrokeThickness="2"
                                   Opacity="0" />
                             <Rectangle x:Name="IndeterminateIcon" Fill="{StaticResource Accent}"
