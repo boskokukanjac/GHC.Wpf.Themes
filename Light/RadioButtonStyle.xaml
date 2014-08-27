@@ -21,22 +21,8 @@
                             <ColumnDefinition Width="13" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
+                        
                         <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal" />
-                                <VisualState x:Name="MouseOver" />
-                                <VisualState x:Name="Pressed" />
-                                <VisualState x:Name="Disabled">
-                                    <Storyboard>
-                                        <DoubleAnimation Duration="0" To=".55"
-                                                Storyboard.TargetProperty="(UIElement.Opacity)"
-                                                Storyboard.TargetName="contentPresenter" />
-                                        <DoubleAnimation Duration="0" To=".55"
-                                                Storyboard.TargetProperty="(UIElement.Opacity)"
-                                                Storyboard.TargetName="Background" />
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
                             <VisualStateGroup x:Name="CheckStates">
                                 <VisualState x:Name="Checked">
                                     <Storyboard>
@@ -47,41 +33,39 @@
                                 </VisualState>
                                 <VisualState x:Name="Unchecked" />
                             </VisualStateGroup>
-                            <VisualStateGroup x:Name="FocusStates">
-                                <VisualState x:Name="Focused" />
-                                <VisualState x:Name="Unfocused" />
-                            </VisualStateGroup>
-                            <VisualStateGroup x:Name="ValidationStates">
-                                <VisualState x:Name="Valid" />
-                                <VisualState x:Name="InvalidUnfocused">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility"
-                                                Storyboard.TargetName="ValidationErrorElement">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Grid Height="12" HorizontalAlignment="Left"
-                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="12">
+                        
+                        <Grid Height="12" 
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                              Width="12">
 
-                            <Ellipse x:Name="Background" Fill="{TemplateBinding Background}" Height="12"
-                                    Stroke="{TemplateBinding BorderBrush}"
-                                    StrokeThickness="{TemplateBinding BorderThickness}" Width="12" />
+                            <Ellipse x:Name="Background" 
+                                     Fill="{TemplateBinding Background}" 
+                                     Height="12"
+                                     Width="12" 
+                                     Stroke="{TemplateBinding BorderBrush}"
+                                     StrokeThickness="{TemplateBinding BorderThickness}" />
                             
                             <Ellipse x:Name="CheckIcon" Fill="{TemplateBinding Foreground}" Margin="3" Opacity="0" />
                         </Grid>
-                        <ContentPresenter x:Name="contentPresenter" Content="{TemplateBinding Content}"
-                                ContentTemplate="{TemplateBinding ContentTemplate}" Grid.Column="1"
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                Margin="{TemplateBinding Padding}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        
+                        <ContentPresenter x:Name="contentPresenter" 
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                          Grid.Column="1"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                     </Grid>
                     
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="Background" Property="Stroke" Value="{StaticResource Accent}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Background" Property="Stroke" Value="{StaticResource ForegroundDisabled}" />
+                            <Setter Property="Foreground" Value="{StaticResource ForegroundDisabled}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                     
