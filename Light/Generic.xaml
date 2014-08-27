@@ -16,6 +16,7 @@
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/MenuStyle.xaml"/>
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/ToolTipStyle.xaml"/>
         <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/GroupBoxStyle.xaml"/>
+        <ResourceDictionary Source="/GHC.Wpf.Themes;component/Light/RadioButtonStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>
