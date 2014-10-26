@@ -6,6 +6,7 @@
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="GroupBox">
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
         <Setter Property="Foreground" Value="{StaticResource Foreground}" />
         <Setter Property="Padding" Value="2" />
         <Setter Property="Template">
@@ -19,13 +20,12 @@
                         <Border Grid.Row="0"
                                 BorderThickness="1"
                                 CornerRadius="2,2,0,0" 
-                                Background="{StaticResource BackgroundBrush}"
-                                BorderBrush="{StaticResource BorderBrush}">
+                                Background="{StaticResource GroupBoxHeaderBackground}"
+                                BorderBrush="{TemplateBinding BorderBrush}">
 
                             <ContentPresenter Margin="4" 
-                                              HorizontalAlignment="Center"
-                                              TextBlock.FontSize="15"
-                                              TextBlock.FontWeight="Bold"
+                                              HorizontalAlignment="Left"
+                                              TextBlock.FontSize="13"
                                               ContentSource="Header"
                                               RecognizesAccessKey="True" />
                         </Border>

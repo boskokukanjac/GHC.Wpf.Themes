@@ -7,7 +7,7 @@
 
     <Style TargetType="{x:Type TabControl}">
         <Setter Property="BorderThickness" Value="0,2,0,0" />
-        <Setter Property="BorderBrush" Value="{StaticResource TabControlBorderBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Accent}" />
         <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -35,7 +35,7 @@
                                 KeyboardNavigation.TabNavigation="Local"
                                 KeyboardNavigation.DirectionalNavigation="Contained"
                                 KeyboardNavigation.TabIndex="2">
-                            <ContentPresenter x:Name="PART_SelectedContentHost" 
+                            <ContentPresenter x:Name="PART_SelectedContentHost" Margin="0,5,0,0"
                                               ContentSource="SelectedContent" />
                         </Border>
                     </Grid>
@@ -64,18 +64,26 @@
                                                   VerticalAlignment="Center"
                                                   HorizontalAlignment="Center"
                                                   ContentSource="Header"
-                                                  Margin="12,2"
+                                                  Margin="12,4"
                                                   TextBlock.FontSize="13"
                                                   RecognizesAccessKey="True" />
+                                <Polygon Points="0,0 8,0 4,4" 
+                                         Name="arrow"
+                                         Visibility="Collapsed"
+                                         Stroke="{StaticResource Accent}" 
+                                         Fill="{StaticResource Accent}" 
+                                         HorizontalAlignment="Center" Margin="0,0,0,-6" VerticalAlignment="Bottom"/>
                             </Grid>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="{StaticResource TabItemActiveForeground}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource TabItemHoverBackground}" />
+                            <Setter Property="Foreground" Value="{StaticResource TabItemHoverForeground}" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource Accent}" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="arrow" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource Accent}" />
                             <Setter Property="Foreground" Value="{StaticResource TabItemActiveForeground}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">

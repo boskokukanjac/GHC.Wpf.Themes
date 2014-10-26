@@ -15,10 +15,16 @@
 
     <SolidColorBrush x:Key="TabControlBorderBrush">#FFE1E1E1</SolidColorBrush>
     <SolidColorBrush x:Key="TabItemForeground">#FF777777</SolidColorBrush>
-    <SolidColorBrush x:Key="TabItemActiveForeground">#FF444444</SolidColorBrush>
+    <SolidColorBrush x:Key="TabItemHoverForeground">#FF444444</SolidColorBrush>
+    <SolidColorBrush x:Key="TabItemHoverBackground">#FFEEEEEE</SolidColorBrush>
+    <SolidColorBrush x:Key="TabItemActiveForeground">#FFFFFFFF</SolidColorBrush>
 
+    <!--Combo Box-->
     <SolidColorBrush x:Key="ComboBoxDropDownArrowColor">#FF444444</SolidColorBrush>
     <SolidColorBrush x:Key="ComboBoxDropDownArrowHoverColor">#FF000000</SolidColorBrush>
+
+    <!--Group Box-->
+    <SolidColorBrush x:Key="GroupBoxHeaderBackground">#FFF5F5F5</SolidColorBrush>
 
     <!-- Scroll Bar -->
     <SolidColorBrush x:Key="ScrollBarMouseDownBrush" Color="#6D6D6D"/>
