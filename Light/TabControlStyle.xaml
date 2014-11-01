@@ -45,7 +45,6 @@
     </Style>
 
     <Style TargetType="{x:Type TabItem}">
-        <Setter Property="Foreground" Value="{StaticResource TabItemForeground}" />
         <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
         <Setter Property="Template">
             <Setter.Value>
@@ -77,17 +76,19 @@
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="False">
+                            <Setter Property="TextBlock.Foreground" TargetName="ContentSite" Value="{StaticResource TabItemHeaderForeground}" />
+                        </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Border" Property="Background" Value="{StaticResource TabItemHoverBackground}" />
-                            <Setter Property="Foreground" Value="{StaticResource TabItemHoverForeground}" />
+                            <Setter Property="TextBlock.Foreground" TargetName="ContentSite" Value="{StaticResource TabItemHeaderHoverForeground}" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Visibility" Value="Visible" TargetName="arrow" />
                             <Setter TargetName="Border" Property="Background" Value="{StaticResource Accent}" />
-                            <Setter Property="Foreground" Value="{StaticResource TabItemActiveForeground}" />
+                            <Setter Property="TextBlock.Foreground" TargetName="ContentSite" Value="{StaticResource TabItemHeaderActiveForeground}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Foreground" Value="{StaticResource ForegroundDisabled}" />
+                            <Setter Property="TextBlock.Foreground" TargetName="ContentSite" Value="{StaticResource ForegroundDisabled}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

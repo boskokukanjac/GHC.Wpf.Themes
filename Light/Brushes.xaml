@@ -14,18 +14,17 @@
     <SolidColorBrush x:Key="ForegroundDisabled">#FFCCCCCC</SolidColorBrush>
 
     <SolidColorBrush x:Key="TabControlBorderBrush">#FFE1E1E1</SolidColorBrush>
-    <SolidColorBrush x:Key="TabItemForeground">#FF777777</SolidColorBrush>
-    <SolidColorBrush x:Key="TabItemHoverForeground">#FF444444</SolidColorBrush>
-    <SolidColorBrush x:Key="TabItemHoverBackground">#FFEEEEEE</SolidColorBrush>
-    <SolidColorBrush x:Key="TabItemActiveForeground">#FFFFFFFF</SolidColorBrush>
+    <SolidColorBrush x:Key="TabItemHeaderForeground">#FF777777</SolidColorBrush>
+    <SolidColorBrush x:Key="TabItemHeaderHoverForeground">#FF444444</SolidColorBrush>
+    <SolidColorBrush x:Key="TabItemHeaderActiveForeground">#FFFFFFFF</SolidColorBrush>
 
     <!--Combo Box-->
     <SolidColorBrush x:Key="ComboBoxDropDownArrowColor">#FF444444</SolidColorBrush>
     <SolidColorBrush x:Key="ComboBoxDropDownArrowHoverColor">#FF000000</SolidColorBrush>
 
-    <!--Group Box-->
-    <SolidColorBrush x:Key="GroupBoxHeaderBackground">#FFF5F5F5</SolidColorBrush>
-
+    <!--Text box-->
+    <SolidColorBrush x:Key="TextBoxBorderBrush">#FFCCCCCC</SolidColorBrush> 
+    
     <!-- Scroll Bar -->
     <SolidColorBrush x:Key="ScrollBarMouseDownBrush" Color="#6D6D6D"/>
     <SolidColorBrush x:Key="ScrollbarGlyphBrush" Color="#AEACAC" />

@@ -6,12 +6,11 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="TextBox">
-        <Setter Property="Background" Value="White" />
-        <Setter Property="BorderBrush" Value="#FFCCCCCC" />
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource TextBoxBorderBrush}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Padding" Value="2" />
-        <Setter Property="Foreground" Value="#FF444444" />
-        <Setter Property="Height" Value="24" />
+        <Setter Property="Height" Value="28" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Template">
             <Setter.Value>
@@ -80,7 +79,7 @@
                         <Border x:Name="DisabledVisualElement" Background="{DynamicResource DisabledBrush}"
                                 IsHitTestVisible="False" Margin="1" Opacity="0" CornerRadius="0" />
                         <Border x:Name="ValidationErrorElement" Visibility="Collapsed" BorderBrush="Red" BorderThickness="1"
-                                IsHitTestVisible="False" Margin="1" CornerRadius="0" />
+                                IsHitTestVisible="False" Margin="0" CornerRadius="0" />
                     </Grid>                    
                 </ControlTemplate>
             </Setter.Value>
