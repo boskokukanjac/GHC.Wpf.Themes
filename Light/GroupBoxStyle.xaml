@@ -20,7 +20,7 @@
                         </Grid.RowDefinitions>
 
                         <ContentPresenter Margin="1,2" 
-                                          TextBlock.FontSize="16"
+                                          TextBlock.FontSize="15"
                                           HorizontalAlignment="Left"
                                           ContentSource="Header"
                                           RecognizesAccessKey="True" />
